@@ -4,11 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prube first</title>
+    <title>WDD 231 - Francisco De Leon</title>
+    <meta name="description" content="WDD 231 - Frontend, home page assignment">
+    <meta name="author" content="Francisco De Leon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <div class="logo-box">
+            <img src="images/fox-svgrepo.svg" alt="Fox Logo">
+            <span>Francisco De Leon</span>
+        </div>
+        <button id="menu" aria-label="Open Navigation Menu"></button>
+        <nav>
+            <ul id="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <h1>Home</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>My name is Francisco De Leon, and I am from Guatemala. I am currently studying Software Development
+                    and Systems Engineering through BYU-Pathway Worldwide. I have a background in graphic design and
+                    experience
+                    working in international companies, where I have developed strong communication, problem-solving,
+                    and teamwork skills.
+                    I enjoy learning about technology and discovering how websites and software applications work. I am
+                    especially interested in web development and programming, and I am continuously improving my skills
+                    in HTML, CSS, JavaScript, and C#.
+                    My goal is to become a professional software developer, build useful applications, and continue
+                    growing both personally and professionally. I believe that learning is a lifelong process, and I
+                    enjoy taking on new challenges that help me
+                    improve.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Student Photo</h2>
+            <img src="images/francisco-de-leon.webp" alt="Francisco De Leon">
+        </section>
+        <section class="card">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="allBtn">All</button>
+                <button id="cseBtn">CSE</button>
+                <button id="wddBtn">WDD</button>
+            </div>
+
+            <div id="course-cards-container"></div>
+
+            <p id="total-credits"></p>
+        </section>
+
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/" target="_blank" rel="noopener">
+                <img src="images/linkedin-brands-solid-full.svg" alt="LinkedIn logo">
+            </a>
+            <a href="https://github.com/frdeleon-dev" target="_blank" rel="noopener">
+                <img src="images/github-brands-solid-full.svg" alt="GitHub logo">
+            </a>
+            <a href="#" target="_blank" rel="noopener">
+                <img src="images/x-twitter-brands-solid-full.svg" alt="X logo">
+            </a>
+        </div>
+        <p>
+            &copy; <span id="currentyear"></span> * Francisco De Leon * Guatemala, Guatemala City.
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
