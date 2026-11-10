@@ -1,0 +1,85 @@
+{
+    "members": [
+        {
+            "name": "Central Guatemala Coffee",
+            "address": "7th Avenue 12-34, Zone 1, Guatemala City",
+            "phone": "+502 2234-5678",
+            "website": "https://www.cafecentral.gt",
+            "image": "cafe-central.svg",
+            "membershipLevel": 3,
+            "description": "Specialists in 100% Guatemalan gourmet coffee."
+        },
+        {
+            "name": "TecnoSoluciones GT",
+            "address": "Liberación Boulevard 5-45, Zone 9, Guatemala City",
+            "phone": "+502 2332-9876",
+            "website": "https://www.tecnosoluciones.gt",
+            "image": "tecnosoluciones.svg",
+            "membershipLevel": 2,
+            "description": "Software development and corporate technical support."
+        },
+        {
+            "name": "El Saber Bookstore",
+            "address": "6th Street 9-15, Zone 1, Guatemala City",
+            "phone": "+502 2251-1122",
+            "website": "https://www.libreriaelsaber.gt",
+            "image": "libreria-saber.svg",
+            "membershipLevel": 1,
+            "description": "Sales of educational books, literature, and office supplies."
+        },
+        {
+            "name": "Maya Construction & Real Estate",
+            "address": "Diagonal 6 12-42, Zone 10, Guatemala City",
+            "phone": "+502 2380-4455",
+            "website": "https://www.inmobiliariamaya.gt",
+            "image": "inmobiliaria-maya.svg",
+            "membershipLevel": 3,
+            "description": "High-quality residential and commercial projects."
+        },
+        {
+            "name": "Antiguan Handicrafts and Textiles",
+            "address": "4th Western Street #18, Antigua Guatemala",
+            "phone": "+502 7832-3344",
+            "website": "https://www.textilesantiguenos.gt",
+            "image": "textiles-antiguos.svg",
+            "membershipLevel": 1,
+            "description": "Authentic handmade textile crafts made by local artisans."
+        },
+        {
+            "name": "AutoParts of the South",
+            "address": "Aguilar Batres Highway 24-05, Zone 11, Guatemala City",
+            "phone": "+502 2475-8899",
+            "website": "https://www.autorepuestosdelsur.gt",
+            "image": "autoparts-logo.svg",
+            "membershipLevel": 2,
+            "description": "Original and generic auto parts for all types of vehicles."
+        },
+        {
+            "name": "Green Solutions of Guatemala",
+            "address": "15th Street 3-20, Zone 14, Guatemala City",
+            "phone": "+502 2368-7711",
+            "website": "https://www.solucionesverdes.gt",
+            "image": "green-solutions.svg",
+            "membershipLevel": 3,
+            "description": "Consulting and projects in solar energy and environmental sustainability."
+        },
+        {
+            "name": "Guatemala Tech Hub",
+            "address": "4th Avenue 14-55, Zone 10, Guatemala City",
+            "phone": "+502 2390-1122",
+            "website": "https://www.guatemalatechhub.gt",
+            "image": "tech-hub.svg",
+            "membershipLevel": 3,
+            "description": "Co-working space and technology incubator supporting local startups."
+        },
+        {
+            "name": "Logística del Istmo",
+            "address": "Autopista al Pacífico Km 14.5, Villa Nueva",
+            "phone": "+502 2431-9988",
+            "website": "https://www.logisticadelistmo.gt",
+            "image": "logistic-logo.svg",
+            "membershipLevel": 2,
+            "description": "Freight forwarding, warehousing, and regional supply chain solutions."
+        }
+    ]
+}

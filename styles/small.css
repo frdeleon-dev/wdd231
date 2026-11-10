@@ -57,20 +57,6 @@ header {
     content: "✕";
 }
 
-/*
-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--header-bg);
-    display: none;
-}
-
-nav.open {
-    display: block;
-}*/
-
 nav {
     position: absolute;
     top: 100%;
@@ -79,24 +65,6 @@ nav {
     background-color: var(--header-bg);
 }
 
-/*
-#navigation {
-    display: none;
-}
-
-#navigation.open {
-    display: flex;
-}
-
-#navigation {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    
-    
-    flex-direction: column;
-}*/
 #navigation {
     list-style: none;
     margin: 0;
@@ -125,7 +93,7 @@ nav {
     background-color: var(--secondary-color);
 }
 
-/* Contenido Principal */
+
 main {
     max-width: 768px;
     margin: 1.5rem auto;
@@ -146,6 +114,7 @@ h1 {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     height: 100%;
+    
 }
 
 .card h2 {
@@ -167,6 +136,7 @@ h1 {
     width: 100%;
     height: auto;
     padding: 1rem;
+    
 }
 
 .filter-buttons {
@@ -244,7 +214,6 @@ footer p {
     transition: transform 0.2s;
 }
 
-
 .course-card.completed {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -258,9 +227,6 @@ footer p {
 }
 
 
-
-
-
 .social-links img {
     width: 28px;
 
@@ -271,7 +237,6 @@ footer p {
 
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
 
 .social-links a:hover img {
     transform: scale(1.15);
