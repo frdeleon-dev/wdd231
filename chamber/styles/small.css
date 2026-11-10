@@ -6,7 +6,6 @@
     --white: #ffffff;
     --font-family: 'Roboto', sans-serif;
 }
-
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
@@ -14,7 +13,6 @@ body {
     line-height: 1.6;
     margin: 0;
 }
-
 header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -25,7 +23,6 @@ header {
     position: relative;
     box-shadow: 0px 2px 5px #2d3748;
 }
-
 .logo-box {
     display: flex;
     align-items: center;
@@ -33,12 +30,10 @@ header {
     font-weight: 700;
     font-size: 1.1rem;
 }
-
 .logo-box img {
     width: 40px;
     height: 40px;
 }
-
 #menu {
     background: none;
     border: none;
@@ -46,15 +41,12 @@ header {
     font-size: 1.8rem;
     cursor: pointer;
 }
-
 #menu::before {
     content: "≡";
 }
-
 #menu.open::before {
     content: "✕";
 }
-
 nav {
     position: absolute;
     top: 100%;
@@ -63,7 +55,6 @@ nav {
     background-color: var(--primary-color);
     z-index: 10;
 }
-
 #navigation {
     list-style: none;
     margin: 0;
@@ -71,11 +62,9 @@ nav {
     display: none;
     flex-direction: column;
 }
-
 #navigation.open {
     display: flex;
 }
-
 #navigation li a {
     display: block;
     color: #ffffff;
@@ -85,31 +74,25 @@ nav {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 #navigation li a:hover,
 #navigation li a.active {
     background-color: var(--secondary-color);
 }
-
-
 main {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
 }
-
 h1 {
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
-
 .menu-view {
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
 .menu-view button {
     padding: 0.5rem 1.5rem;
     cursor: pointer;
@@ -119,19 +102,16 @@ h1 {
     border-radius: 4px;
     font-weight: 500;
 }
-
 .menu-view button:hover {
     background-color: var(--secondary-color);
     color: var(--text-color);
 }
-
 #directory-cards.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 10px;
 }
-
 #directory-cards.grid section {
     background-color: var(--white);
     border: 1px solid #ddd;
@@ -140,21 +120,17 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
-
 #directory-cards.grid img {
     max-width: 120px;
     height: auto;
     margin-bottom: 1rem;
 }
-
-
 #directory-cards.list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
 }
-
 #directory-cards.list section {
     display: flex;
     flex-direction: row;
@@ -165,94 +141,67 @@ h1 {
     padding: 15px;
     border-radius: 6px;
 }
-
 #directory-cards.list img {
     display: none;
 }
-
-
 #directory-cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
 }
-
-
 #directory-cards section {
     display: grid;
     grid-template-columns: 90px 1fr;
     grid-template-rows: auto repeat(4, auto);
-
     background-color: #e2e2e2;
     border-radius: 8px;
     overflow: hidden;
-
     padding-bottom: 0.5rem;
 }
-
 #directory-cards section h3 {
     grid-column: 1 / -1;
     grid-row: 1;
-
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
-
     margin: 0;
     padding: 0.5rem;
-
     border-bottom: 1px solid #999;
 }
-
 #directory-cards section img {
     grid-column: 1;
     grid-row: 2 / 6;
-
     width: 75px;
     height: 75px;
-
     object-fit: contain;
     padding: 0.5rem;
     margin: auto;
 }
-
 #directory-cards section p {
     grid-column: 2;
-
     font-size: 0.8rem;
     line-height: 1.4;
-
     padding: 0.1rem 0.5rem;
     margin: 0;
-
     overflow-wrap: anywhere;
 }
-
 #directory-cards section p:nth-of-type(1) {
     grid-row: 2;
 }
-
 #directory-cards section p:nth-of-type(2) {
     grid-row: 3;
 }
-
 #directory-cards section p:nth-of-type(3) {
     grid-row: 4;
 }
-
-
 #directory-cards section a {
     grid-column: 2;
     grid-row: 5;
-
     font-size: 0.8rem;
     padding: 0.1rem 0.5rem;
-
     overflow-wrap: anywhere;
 }
-
-/* footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -261,7 +210,6 @@ footer {
     font-size: 0.9rem;
     margin-top: 2rem;
 }
-
 footer p {
     margin: 0.5rem 0;
 }
