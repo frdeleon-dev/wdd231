@@ -226,3 +226,158 @@ footer {
     height: 3rem;
 }
 
+
+/* ================================
+   HOME PAGE - HERO SECTION
+================================ */
+
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-content {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    margin-bottom: 1.2rem;
+}
+
+.join-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+}
+
+.join-button:hover {
+    background-color: var(--white);
+}
+
+
+/* ================================
+   CURRENT EVENTS
+================================ */
+
+.events-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.event-card {
+    background-color: var(--white);
+    border-left: 5px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.event-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+
+/* ================================
+   WEATHER
+================================ */
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.weather-current,
+.weather-details,
+.weather-forecast {
+    background-color: var(--white);
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.weather-current h3,
+.weather-forecast h3 {
+    color: var(--primary-color);
+}
+
+.weather-current img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+#temperature {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.weather-details p {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+
+/* ================================
+   BUSINESS SPOTLIGHT
+================================ */
+
+.business-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.business-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.business-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.business-card h3 {
+    color: var(--primary-color);
+}
+
+.business-card a {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.business-card a:hover {
+    color: #805b00;
+}

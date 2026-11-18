@@ -150,4 +150,59 @@
             transform: scale(1.1);
         }
 
+/* ================================
+   HOME PAGE - DESKTOP
+================================ */
+
+@media screen and (min-width: 768px) {
+
+    /* HERO */
+
+    .hero img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .hero-content {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        max-width: 450px;
+        border-radius: 8px;
+        text-align: left;
+        background-color: rgba(26, 54, 93, 0.95);
+    }
+
+    .hero-content h1 {
+        text-align: left;
+    }
+
+    /* EVENTS */
+
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* WEATHER */
+
+    .weather-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* BUSINESS SPOTLIGHT */
+
+    .business-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .business-card {
+        transition: transform 0.3s ease;
+    }
+
+    .business-card:hover {
+        transform: translateY(-5px);
+    }
+
+}
+
 }
