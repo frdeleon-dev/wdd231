@@ -203,6 +203,7 @@ h1 {
     padding: 0.1rem 0.5rem;
     overflow-wrap: anywhere;
 }
+/*
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -213,4 +214,41 @@ footer {
 }
 footer p {
     margin: 0.5rem 0;
+}*/
+footer {
+    background-color: #d9d9d9;
+    padding: 1.5rem 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.footer-column p {
+    margin: 0;
+}
+
+.social-links {
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.social-links img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
 }
