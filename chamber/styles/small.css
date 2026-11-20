@@ -235,11 +235,17 @@ footer {
     position: relative;
     margin-bottom: 2rem;
 }
-
+/*
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 8px;
+}*/
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 8px;
 }
 
@@ -310,8 +316,12 @@ footer {
     gap: 1rem;
 }
 
+.weather-container img {
+    display: block;
+    margin: 0 auto;
+}
+
 .weather-current,
-.weather-details,
 .weather-forecast {
     background-color: var(--white);
     padding: 1.2rem;
@@ -347,11 +357,23 @@ footer {
 /* ================================
    BUSINESS SPOTLIGHT
 ================================ */
-
+.business-spotlight,
+.weather,
+.events{
+    margin-top: 2rem;
+    text-align: center;
+}
+.business-spotlight > h2,
+.weather > h2,
+.events > h2
+{
+    font-size: 2rem;
+}
 .business-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    
 }
 
 .business-card {
@@ -367,6 +389,9 @@ footer {
     width: 100px;
     height: 100px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    
 }
 
 .business-card h3 {

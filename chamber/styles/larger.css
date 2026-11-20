@@ -188,6 +188,29 @@
     .weather-container {
         grid-template-columns: repeat(3, 1fr);
     }
+    /*
+    .weather-current{
+   
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 1rem;
+        text-align: center;
+    }
+        */
+
+    .weather-forecast {
+        grid-column: span 2;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    .weather-forecast > div {
+        /*background-color: #999;*/
+        flex: 1;
+        text-align: center;
+        /*padding: 1rem;*/
+        /*border-radius: 8px;*/
+    }
 
     /* BUSINESS SPOTLIGHT */
 

@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-       <!-- media="print" onload="this.media='all'">-->
+    <!-- media="print" onload="this.media='all'">-->
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     </noscript>
@@ -28,6 +28,8 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/weather-forecast.js" defer></script>
 
     <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:description"
@@ -40,160 +42,140 @@
 </head>
 
 <body>
-<header>
-    <div class="logo-box">
-        <img src="images/chamber-logo.webp" alt="Guatemala Chamber of Commerce Logo">
-        <span>Guatemala Chamber of Commerce</span>
-    </div>
-    <button id="menu" aria-label="Menu Button"></button>
-    <nav>
-        <ul id="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/hero.webp" alt="View of our local community and businesses">
-
-        <div class="hero-content">
-            <h1>Welcome to Our Chamber of Commerce</h1>
-            <p>Connecting local businesses and building a stronger community.</p>
-            <a href="join.html" class="join-button">Join the Chamber</a>
+    <header>
+        <div class="logo-box">
+            <img src="images/chamber-logo.webp" alt="Guatemala Chamber of Commerce Logo">
+            <span>Guatemala Chamber of Commerce</span>
         </div>
-    </section>
+        <button id="menu" aria-label="Menu Button"></button>
+        <nav>
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Current Events Section -->
-    <section class="events">
-        <h2>Current Events</h2>
+    <main>
 
-        <div class="events-container">
-            <article class="event-card">
-                <h3>Business Networking Event</h3>
-                <p>Connect with local business owners and discover new opportunities.</p>
-                <p><strong>Date:</strong> November 25, 2026</p>
-            </article>
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 768px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Hero image">
+            </picture>
+            <!--<img src="images/hero.webp" alt="View of our local community and businesses">-->
 
-            <article class="event-card">
-                <h3>Community Business Fair</h3>
-                <p>Explore local products, services, and businesses in our community.</p>
-                <p><strong>Date:</strong> December 5, 2026</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- Weather Section -->
-    <section class="weather">
-        <h2>Weather</h2>
-
-        <div class="weather-container">
-            <div class="weather-current">
-                <h3>Current Weather</h3>
-                <img src="images/weather-icon.svg" alt="Weather conditions" id="weather-icon">
-                <p id="temperature">-- °C</p>
-                <p id="weather-description">Loading weather...</p>
+            <div class="hero-content">
+                <h1>Welcome to Our Chamber of Commerce</h1>
+                <p>Connecting local businesses and building a stronger community.</p>
+                <a href="join.html" class="join-button">Join the Chamber</a>
             </div>
+        </section>
 
-            <div class="weather-details">
-                <p>Location: Guatemala City</p>
-                <p>Humidity: <span id="humidity">--%</span></p>
-                <p>Wind Speed: <span id="wind-speed">-- km/h</span></p>
+        <!-- Current Events Section -->
+        <section class="events">
+            <h2>Current Events</h2>
+
+            <div class="events-container">
+                <article class="event-card">
+                    <h3>Business Networking Event</h3>
+                    <p>Connect with local business owners and discover new opportunities.</p>
+                    <p><strong>Date:</strong> November 25, 2026</p>
+                </article>
+
+                <article class="event-card">
+                    <h3>Community Business Fair</h3>
+                    <p>Explore local products, services, and businesses in our community.</p>
+                    <p><strong>Date:</strong> December 5, 2026</p>
+                </article>
             </div>
+        </section>
 
-            <div class="weather-forecast">
-                <h3>Weather Forecast</h3>
-                <div id="forecast-container">
-                    <p>Loading forecast...</p>
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather</h2>
+        
+            <div class="weather-container">
+                <div class="weather-current">
+                    <h3>Current Weather</h3>
+                    <img id="weather-icon" src="" alt="">
+                    <p id="current-temp"></p>
+                    <p id="weather-description"></p>
+                </div>
+        
+                <div class="weather-forecast">
+                    <div>
+                        <h3 id="first-day"></h3>
+                        <img id="first-icon" src="" alt="">
+                        <p id="first-temp"></p>
+                        <p id="first-description"></p>
+                    </div>
+                    <div>
+                        <h3 id="second-day"></h3>
+                        <img id="second-icon" src="" alt="">
+                        <p id="second-temp"></p>
+                        <p id="second-description"></p>
+                    </div>
+                    <div>
+                        <h3 id="third-day"></h3>
+                        <img id="third-icon" src="" alt="">
+                        <p id="third-temp"></p>
+                        <p id="third-description"></p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Business Spotlight Section -->
+        <section class="business-spotlight">
+            <h2>Business Spotlight</h2>
+            <p>Discover some of our featured local businesses.</p>
+            <div class="business-container" id="spotlight-container"></div>
+         </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+
+            <!-- Columna izquierda -->
+            <div class="footer-column">
+                <strong>Guatemala Chamber of Commerce</strong>
+                <p>Zona 4, Vía 5</p>
+                <p>Guatemala City, Guatemala</p>
+                <p>info@gtchamber.org</p>
+                <p>(502) 2200-0000</p>
+            </div>
+
+            <!-- Columna central -->
+            <div class="footer-column social-links">
+                <a href="https://youtube.com" target="_blank">
+                    <img src="images/youtube.svg" alt="YouTube">
+                </a>
+
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/x-logo-white.png" alt="Twitter">
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="footer-column">
+                <p>WDD231 Class Project</p>
+                <p>Francisco De Leon</p>
+                <p>&copy; <span id="currentyear"></span> Guatemala Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+
         </div>
-    </section>
-
-    <!-- Business Spotlight Section -->
-    <section class="business-spotlight">
-    <h2>Business Spotlight</h2>
-    <p>Discover some of our featured local businesses.</p>
-
-    <div class="business-container" id="spotlight-container"></div>
-      <!--  <h2>Business Spotlight</h2>
-        <p>Discover some of our featured local businesses.</p>
-
-        <div class="business-container">
-
-            <article class="business-card">
-                <img src="images/business-1.webp" alt="Business 1 logo">
-                <h3>Local Business One</h3>
-                <p>Business description and services.</p>
-                <p><strong>Phone:</strong> 0000-0000</p>
-                <p><strong>Email:</strong> business1@example.com</p>
-                <a href="#" target="_blank">Visit Website</a>
-            </article>
-
-            <article class="business-card">
-                <img src="images/business-2.webp" alt="Business 2 logo">
-                <h3>Local Business Two</h3>
-                <p>Business description and services.</p>
-                <p><strong>Phone:</strong> 0000-0000</p>
-                <p><strong>Email:</strong> business2@example.com</p>
-                <a href="#" target="_blank">Visit Website</a>
-            </article>
-
-            <article class="business-card">
-                <img src="images/business-3.webp" alt="Business 3 logo">
-                <h3>Local Business Three</h3>
-                <p>Business description and services.</p>
-                <p><strong>Phone:</strong> 0000-0000</p>
-                <p><strong>Email:</strong> business3@example.com</p>
-                <a href="#" target="_blank">Visit Website</a>
-            </article>
-
-        </div>-->
-    </section>
-
-</main>
-
-<footer>
-    <div class="footer-content">
-        
-        <!-- Columna izquierda -->
-        <div class="footer-column">
-            <strong>Guatemala Chamber of Commerce</strong>
-            <p>Zona 4, Vía 5</p>
-            <p>Guatemala City, Guatemala</p>
-            <p>info@gtchamber.org</p>
-            <p>(502) 2200-0000</p>
-        </div>
-
-        <!-- Columna central -->
-        <div class="footer-column social-links">
-            <a href="https://youtube.com" target="_blank">
-                <img src="images/youtube.svg" alt="YouTube">
-            </a>
-
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/x-logo-white.png" alt="Twitter">
-            </a>
-
-            <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin.svg" alt="LinkedIn">
-            </a>
-        </div>
-
-        <!-- Columna derecha -->
-        <div class="footer-column">
-            <p>WDD231 Class Project</p>
-            <p>Francisco De Leon</p>
-            <p>&copy; <span id="currentyear"></span> Guatemala Chamber of Commerce</p>
-            <p id="lastModified"></p>
-        </div>
-
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>

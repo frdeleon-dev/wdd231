@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
 <header>
     <h1>OpenWeatherMap.org API Test</h1>
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/weather-forecast.js" defer></script>
 </header>
 <main>
     <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
@@ -8,7 +18,20 @@
         <img id="weather-icon" src="" alt="">
         <figcaption></figcaption>
     </figure>
+    <div id="forecast">
+        <p>The current temperature in Trier, Germany is <span id="first-temp"></span></p>
+        <img id="first-icon" src="" alt="">
+        <figcaption id="first-description"></figcaption>
+        <p>The current temperature in Trier, Germany is <span id="second-temp"></span></p>
+        <img id="second-icon" src="" alt="">
+        <figcaption id="second-description"></figcaption>
+        <p>The current temperature in Trier, Germany is <span id="third-temp"></span></p>
+        <img id="third-icon" src="" alt="">
+        <figcaption id="third-description"></figcaption>
+    </div>
 </main>
 <footer>
-    [Enter Your Name Here] | OpenWeatherMap.org | CC BY-SA 4.0
+    Francisco De Leon | OpenWeatherMap.org | CC BY-SA 4.0
 </footer>
+</body>
+</html>
