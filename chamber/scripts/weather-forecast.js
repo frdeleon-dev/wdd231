@@ -1,19 +1,21 @@
-const firstTemp = document.querySelector('#first-temp');
-const firstWeatherIcon = document.querySelector('#first-icon');
-const firstCaptionDesc = document.querySelector('#first-description');
+const forecastContainer = document.querySelector("#forecast-container");
+//
+//const firstTemp = document.querySelector('#first-temp');
+//const firstWeatherIcon = document.querySelector('#first-icon');
+//const firstCaptionDesc = document.querySelector('#first-description');
 
-const secondTemp = document.querySelector('#second-temp');
-const secondWeatherIcon = document.querySelector('#second-icon');
-const secondCaptionDesc = document.querySelector('#second-description');
+//const secondTemp = document.querySelector('#second-temp');
+//const secondWeatherIcon = document.querySelector('#second-icon');
+//const secondCaptionDesc = document.querySelector('#second-description');
 
-const thirdTemp = document.querySelector('#third-temp');
-const thirdWeatherIcon = document.querySelector('#third-icon');
-const thirdCaptionDesc = document.querySelector('#third-description');
+//const thirdTemp = document.querySelector('#third-temp');
+//const thirdWeatherIcon = document.querySelector('#third-icon');
+//const thirdCaptionDesc = document.querySelector('#third-description');
 
-const firstDay = document.querySelector('#first-day');
-const secondDay = document.querySelector('#second-day');
-const thirdDay = document.querySelector('#third-day');
-
+//const firstDay = document.querySelector('#first-day');
+//const secondDay = document.querySelector('#second-day');
+//const thirdDay = document.querySelector('#third-day');
+//
 const myForecastKey = "e4eb580d16faf33e244ecb81175d4bc9"
 const myForecastLat = "49.75"
 const myForecastLong = "6.64"
@@ -37,7 +39,7 @@ async function forecastApiFetch() {
     }
 } 
 
-
+/*
 function displayForecastResult(data) {
     const forecastDays = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
     const day1 = forecastDays[0];
@@ -83,6 +85,41 @@ function displayForecastResult(data) {
     thirdWeatherIcon.alt = day3.weather[0].description;
     thirdCaptionDesc.textContent = day3.weather[0].description;
 
+}*/
+function displayForecastResult(data) {
+
+    const forecastDays = data.list
+        .filter(item => item.dt_txt.includes("12:00:00"))
+        .slice(0, 3);
+
+    forecastContainer.innerHTML = "";
+
+    forecastDays.forEach(day => {
+
+        const dayName = new Date(day.dt_txt).toLocaleDateString(
+            "en-US",
+            { weekday: "long" }
+        );
+
+        const iconUrl =
+            `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
+
+        const forecastCard = document.createElement("div");
+
+        forecastCard.innerHTML = `
+            <h3>${dayName}</h3>
+            <img
+                src="${iconUrl}"
+                alt="${day.weather[0].description}"
+                width="100"
+                height="100"
+                loading="lazy">
+            <p>${Math.round(day.main.temp)}°F</p>
+            <p>${day.weather[0].description}</p>
+        `;
+
+        forecastContainer.appendChild(forecastCard);
+    });
 }
 
 forecastApiFetch();
