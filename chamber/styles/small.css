@@ -227,21 +227,13 @@ footer {
 }
 
 
-/* ================================
-   HOME PAGE - HERO SECTION
-================================ */
+/* Home page */
 
 .hero {
     position: relative;
     margin-bottom: 2rem;
 }
-/*
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}*/
+
 picture img {
     width: 100%;
     height: auto;
@@ -282,9 +274,7 @@ picture img {
 }
 
 
-/* ================================
-   CURRENT EVENTS
-================================ */
+/* CURRENT EVENTS */
 
 .events-container {
     display: grid;
@@ -306,9 +296,7 @@ picture img {
 }
 
 
-/* ================================
-   WEATHER
-================================ */
+/* WEATHER */
 
 .weather-container {
     display: grid;
@@ -354,9 +342,7 @@ picture img {
 }
 
 
-/* ================================
-   BUSINESS SPOTLIGHT
-================================ */
+/* BUSINESS SPOTLIGHT */
 .business-spotlight,
 .weather,
 .events{

@@ -1,4 +1,3 @@
-// select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('#weather-description');
@@ -16,8 +15,8 @@ async function apiFetch() {
         const response = await fetch(myURL);
         if (response.ok) {
             const data = await response.json();
-            console.log(data); // testing only
-            displayResults(data); // uncomment when ready
+            
+            displayResults(data); 
         } else {
             throw new Error(await response.text());
         }
@@ -26,7 +25,7 @@ async function apiFetch() {
     }
 }
 
-//display the JSON
+
 function displayResults(data) {
     currentTemp.innerHTML = `${data.main.temp}&deg;F`;
     const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
@@ -36,5 +35,5 @@ function displayResults(data) {
     captionDesc.textContent = desc;
 }
 
-//start the process
+
 apiFetch();

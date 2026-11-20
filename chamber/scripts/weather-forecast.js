@@ -1,5 +1,3 @@
-// select HTML elements in the document
-
 const firstTemp = document.querySelector('#first-temp');
 const firstWeatherIcon = document.querySelector('#first-icon');
 const firstCaptionDesc = document.querySelector('#first-description');
@@ -29,8 +27,8 @@ async function forecastApiFetch() {
         const forecastResponse = await fetch(forecastURL);
         if (forecastResponse.ok) {
             const foreCastData = await forecastResponse.json();
-            //console.log(foreCastData); // testing only
-            displayForecastResult(foreCastData); // uncomment when ready
+            
+            displayForecastResult(foreCastData); 
         } else {
             throw new Error(await forecastResponse.text());
         }
@@ -86,8 +84,5 @@ function displayForecastResult(data) {
     thirdCaptionDesc.textContent = day3.weather[0].description;
 
 }
-
-
-//start the process
 
 forecastApiFetch();

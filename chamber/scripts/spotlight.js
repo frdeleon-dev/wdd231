@@ -1,5 +1,3 @@
-//Spot light function
-
 const spotlightContainer = document.querySelector("#spotlight-container");
 const membersURL = "data/members.json";
 
@@ -16,15 +14,12 @@ async function loadSpotlights() {
 
 function displaySpotlights(members) {
 
-    // Select only Gold (3) and Silver (2) members
     const qualifiedMembers = members.filter(member =>
         member.membershipLevel >= 2
     );
 
-    // Randomize member order
     qualifiedMembers.sort(() => Math.random() - 0.5);
 
-    // Randomly display 2 or 3 members
     const spotlightCount = Math.floor(Math.random() * 2) + 2;
 
     const spotlightMembers = qualifiedMembers.slice(0, spotlightCount);
