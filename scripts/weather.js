@@ -8,6 +8,9 @@ const myKey = "e4eb580d16faf33e244ecb81175d4bc9"
 const myLat = "49.75"
 const myLong = "6.64"
 
+const myForecastLat = "14.63"
+const myForecastLong = "-90.50"
+
 
 //const myURL = `//api.openweathermap.org/data/2.5/onecall/current?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
 const myURL = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
