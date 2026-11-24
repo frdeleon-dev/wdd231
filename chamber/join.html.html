@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamber of Commerce Directory | WDD 231</title>
+    <meta name="description" content="Chamber of Commerce Membership Application Page">
+    <meta name="author" content="Francisco De Leon">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 64rem)">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Explore local businesses and members of our Chamber of Commerce directory.">
+    <meta property="og:image" content="https://frdeleon-dev.github.io/wdd231/chamber/images/chamber-of-commerce-gt.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://frdeleon-dev.github.io/wdd231/chamber/directory.html">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/chamber-logo.webp" alt="Guatemala Chamber of Commerce Logo">
+            <span>Guatemala Chamber of Commerce</span>
+        </div>
+        <button id="menu" aria-label="Menu Button"></button>
+        <nav>
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-container">
+    <h2>Membership Application</h2>
+
+    <div class="join-layout">
+      <!-- Form -->
+      <section class="form-section">
+        <h3>Apply to Join</h3>
+        <form method="get" action="thankyou.html" class="chamber-form">
+          
+          <label>
+            First Name *
+            <input type="text" name="first-name" title="Applicant's First Name" autocomplete="given-name" required>
+          </label>
+
+          <label>
+            Last Name *
+            <input type="text" name="last-name" title="Applicant's Last Name" autocomplete="family-name" required>
+          </label>
+
+          <label>
+            Organizational Title
+            <input type="text" name="org-title" title="Your title within the organization (minimum 7 characters: letters, spaces, or hyphens)" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+          </label>
+
+          <label>
+            Email Address *
+            <input type="email" name="email" title="Applicant's Email Address" autocomplete="email" placeholder="example@domain.com" required>
+          </label>
+
+          <label>
+            Mobile Phone Number *
+            <input type="tel" name="phone" title="Applicant's Mobile Phone Number" autocomplete="tel" required>
+          </label>
+
+          <label>
+            Business / Organization Name *
+            <input type="text" name="organization" title="Business or Organization Name" autocomplete="organization" required>
+          </label>
+
+          <label>
+            Membership Level
+            <select name="membership" title="Select a Membership Level">
+              <option value="" disabled selected>Select a Membership Level...</option>
+              <option value="np">NP Membership (Non-Profit - No Fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>
+            Business / Organization Description
+            <textarea name="description" title="Describe your business or organization" rows="4"></textarea>
+          </label>
+
+          <!-- Campo oculto para la marca de tiempo (se llena con JS al cargar) -->
+          <input type="hidden" name="timestamp" id="timestamp">
+
+          <input type="submit" value="Submit Membership Application" class="submit-btn">
+        </form>
+      </section>
+
+      <!-- TARJETAS DE NIVELES DE MEMBRESÍA -->
+      <section class="membership-cards">
+        <h3>Membership Levels</h3>
+
+        <div class="card card-1">
+          <h4>Non-Profit Membership</h4>
+          <button type="button" class="open-modal" data-modal="modal-np">Learn More</button>
+        </div>
+
+        <div class="card card-2">
+          <h4>Bronze Membership</h4>
+          <button type="button" class="open-modal" data-modal="modal-bronze">Learn More</button>
+        </div>
+
+        <div class="card card-3">
+          <h4>Silver Membership</h4>
+          <button type="button" class="open-modal" data-modal="modal-silver">Learn More</button>
+        </div>
+
+        <div class="card card-4">
+          <h4>Gold Membership</h4>
+          <button type="button" class="open-modal" data-modal="modal-gold">Learn More</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- MODALES HTML PARA LOS BENEFICIOS -->
+    <dialog id="modal-np" class="membership-modal">
+      <h3>Non-Profit Membership Benefits</h3>
+      <p><strong>Cost:</strong> Free ($0/year)</p>
+      <ul>
+        <li>Listing in the online Chamber Directory</li>
+        <li>Access to monthly networking mixers</li>
+        <li>Community event calendar submissions</li>
+      </ul>
+      <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-bronze" class="membership-modal">
+      <h3>Bronze Membership Benefits</h3>
+      <p><strong>Cost:</strong> $250/year</p>
+      <ul>
+        <li>All Non-Profit benefits</li>
+        <li>10% discount on Chamber workshops and training</li>
+        <li>Ribbon-cutting ceremony announcement</li>
+      </ul>
+      <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-silver" class="membership-modal">
+      <h3>Silver Membership Benefits</h3>
+      <p><strong>Cost:</strong> $500/year</p>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>25% discount on event tickets and booths</li>
+        <li>Monthly newsletter business feature</li>
+      </ul>
+      <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-gold" class="membership-modal">
+      <h3>Gold Membership Benefits</h3>
+      <p><strong>Cost:</strong> $1,000/year</p>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Home page spotlight advertising rotation</li>
+        <li>VIP access and sponsorship priority at annual gala</li>
+      </ul>
+      <button type="button" class="close-modal">Close</button>
+    </dialog>
+  </main>
+
+    <footer>
+        <div class="footer-content">
+
+            <!-- left Colum -->
+            <div class="footer-column">
+                <strong>Guatemala Chamber of Commerce</strong>
+                <p>Zona 4, Vía 5</p>
+                <p>Guatemala City, Guatemala</p>
+                <p>info@gtchamber.org</p>
+                <p>(502) 2200-0000</p>
+            </div>
+
+            <!-- central Colum -->
+            <div class="footer-column social-links">
+                <a href="https://youtube.com" target="_blank">
+                    <img src="images/youtube.svg" alt="YouTube">
+                </a>
+
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/x-logo-white.webp" alt="Twitter">
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+
+            <!-- Right Columna -->
+            <div class="footer-column">
+                <p>WDD231 Class Project</p>
+                <p>Francisco De Leon</p>
+                <p>&copy; <span id="currentyear"></span> Guatemala Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
