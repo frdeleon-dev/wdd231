@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan | Guatemala Trails and Volcanoes Guide</title>
+    <meta name="description"
+        content="Website project plan for Guatemala Trails and Volcanoes Guide, covering site purpose, target audience scenarios, color palette, typography, and wireframes.">
+    <meta name="author" content="Francisco De Leon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <h1>Site Plan: Guatemala Trails and Volcanoes Guide</h1>
+        <p>WDD 231 Individual Project Plan &bull; Francisco De Leon</p>
+    </header>
+
+    <main>
+
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>Guatemala Trails and Volcanoes Guide</strong></p>
+            <p>
+                I chose this name because it clearly communicates the core subject of the website. Guatemala offers a
+                rich variety of volcanoes and hiking routes, and this descriptive title immediately informs visitors
+                that they will find structured, reliable information about local trails, elevations, difficulty levels,
+                and outdoor preparation.
+            </p>
+            <p><em>Optional domain availability:</em> <code>guatemalatrailsguide.org</code></p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>
+                The website serves as an informational and responsive hub for hikers, outdoor enthusiasts, and travelers
+                exploring Guatemala's mountains and volcanoes. Its scope includes:
+            </p>
+            <ul>
+                <li><strong>Home Page:</strong> Introduces the purpose of the site, highlights a featured volcano or
+                    trail, provides core mountain safety guidelines, and offers clear navigation.</li>
+                <li><strong>Trails &amp; Volcanoes Directory:</strong> Dynamically renders at least 15 trails and
+                    volcanoes from a structured JSON data source using asynchronous fetch, displaying key attributes
+                    (elevation in meters, difficulty rating, geographic location, and estimated hiking time) with
+                    interactive filtering and modal details.</li>
+                <li><strong>Trip Planning &amp; Registration:</strong> Shares preparation and essential gear guidance
+                    alongside an accessible HTML form where users can register interest for guided hikes or request trip
+                    information, displaying submitted values on a dedicated confirmation page.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Target Audience Scenarios</h2>
+            <ul>
+                <li>Which beginner-friendly volcanoes near Antigua or Guatemala City can I hike in a single day, and how
+                    long does each ascent take?</li>
+                <li>What essential gear, cold-weather clothing, and hydration supplies do I need to pack for an
+                    overnight camping trip on Acatenango Volcano?</li>
+                <li>How can I compare the elevation and difficulty level of different Guatemalan trails before
+                    registering for a planned excursion?</li>
+            </ul>
+        </section>
+         
+        <section id="color-scheme">
+            <h2>4. Color Scheme</h2>
+            <p>The selected palette reflects Guatemala's volcanic landscapes, lush cloud forests, and warm highland
+                sunrises. These colors are applied exclusively throughout this site plan document:</p>
+
+            <div class="color-grid">
+                <div class="color-swatch primary-bg">
+                    <h3>Primary Color</h3>
+                    <p><strong>Volcanic Charcoal</strong></p>
+                    <p><code>#222621</code></p>
+                    <p>Used for the header, footer, and high-contrast body text.</p>
+                </div>
+            
+                <div class="color-swatch secondary-bg">
+                    <h3>Secondary Color</h3>
+                    <p><strong>Summit Slate Blue</strong></p>
+                    <p><code>#414E63</code></p>
+                    <p>Used for section headings (<code>&lt;h2&gt;</code>), left borders, and figure captions.</p>
+                </div>
+            
+                <div class="color-swatch accent-bg">
+                    <h3>Accent Color</h3>
+                    <p><strong>Autumn Amber &amp; Ochre</strong></p>
+                    <p><code>#C47E1E</code> &amp; <code>#C69214</code></p>
+                    <p>Used for header/footer borders, heading underlines, and subtle highlights.</p>
+                </div>
+            
+                <div class="color-swatch moss-bg">
+                    <h3>Supporting Nature Tone</h3>
+                    <p><strong>Highland Olive Green</strong></p>
+                    <p><code>#5C6413</code></p>
+                    <p>Used for trail badges, difficulty tags, and natural accents.</p>
+                </div>
+            
+                <div class="color-swatch neutral-bg">
+                    <h3>Background &amp; Surface</h3>
+                    <p><strong>Warm Mist &amp; Crisp White</strong></p>
+                    <p>Page: <code>#F7F5EF</code> | Cards: <code>#FFFFFF</code></p>
+                    <p>Used for the main page background and content cards.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <ul>
+                <li>
+                    <strong>Headings Font — Montserrat (Bold 700 / Semi-Bold 600):</strong> Selected for its clean
+                    geometric structure and strong readability, used on all <code>&lt;h1&gt;</code>,
+                    <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code> elements as well as navigation links.
+                </li>
+                <li>
+                    <strong>Body Font — Open Sans (Regular 400 / Semi-Bold 600):</strong> Selected for high legibility
+                    on both mobile and desktop screens, used for paragraphs, directory card details, lists, and form
+                    labels.
+                </li>
+            </ul>
+        </section>
+
+        <section id="wireframes">
+            <h2>6. Home Page Wireframes</h2>
+            <p>Low-fidelity black-and-white wireframes illustrating the responsive layout structure for the landing page
+                (<code>index.html</code>):</p>
+
+            <div class="wireframe-container">
+                <figure>
+                    <img src="images/wireframe-mobile.png"
+                        alt="Mobile wireframe sketch for Guatemala Trails and Volcanoes Guide home page" width="320"
+                        height="600" loading="lazy">
+                    <figcaption>Mobile View (320px+)</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/wireframe-desktop.png"
+                        alt="Desktop wireframe sketch for Guatemala Trails and Volcanoes Guide home page" width="600"
+                        height="450" loading="lazy">
+                    <figcaption>Desktop / Tablet View (768px+)</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Francisco De Leon | Guatemala City, Guatemala | WDD 231</p>
+    </footer>
+</body>
+
+</html>
